@@ -1,0 +1,81 @@
+destructuring can be applied to object and array
+
+object destructuring:
+
+let name={first:"leo", last:"shen"}
+let {first, last} = name //use property name to do destructuring
+console.log(first) //leo
+console.log(last) //shen
+
+array destructuring:
+
+let name=["leo", "shen"]
+let [first, last] = name //use position to do mapping
+console.log(first)//leo
+console.log(last)//shen
+
+
+three dots can be applied in a way called spread or rest
+
+spread:
+
+let vals =[1,5,2,7,10,3]
+console.log(Math.max(...vals))//10
+    
+console.log(Math.max(...[1,5,2,7,10,3]))//10
+
+let a = [2,3,4]
+let b = [1, ...a, 5]
+console.log(b) //[1,2,3,4,5]
+
+rest (gathering):
+
+ function foo(x, y, ...z) {
+        console.log(z)
+    }
+    
+foo(1,2,3,4,5)//[3,4,5]
+
+function foo( ...z) {
+        console.log(z)
+    }
+    
+foo(1,2,3,4,5)//[1,2,3,4,5]
+
+three dots used in react:
+
+<Modal {...this.props} title='Modal heading' animation={false}>   === <Modal a={this.props.a} b={this.props.b} title='Modal heading' animation={false}>
+
+another example:
+
+function App1() {
+  return <Greeting firstName="Ben" lastName="Hector" />;
+}
+
+function App2() {
+  const props = {firstName: 'Ben', lastName: 'Hector'};
+  return <Greeting {...props} />;
+}
+
+The above two apps are the same.
+
+Here is a rest flavor. other acts as rest to gathering info
+
+const Button = props => {
+  const { kind, ...other } = props;
+  const className = kind === "primary" ? "PrimaryButton" : "SecondaryButton";
+  return <button className={className} {...other} />;
+};
+
+const App = () => {
+  return (
+    <div>
+      <Button kind="primary" onClick={() => console.log("clicked!")}>
+        Hello World!
+      </Button>
+    </div>
+  );
+};
+
+
+

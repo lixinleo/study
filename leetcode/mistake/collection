@@ -1,0 +1,12 @@
+ArrayList<int> my = new ArrayList<int>();
+
+--should--
+ArrayList<Integer> my = new ArrayList<Integer>();
+
+It is ok:
+
+List<Node> ans = new ArrayList<Node>();
+
+
+//also it is wrong. because list is a interface, need use LinkedList which is a concrete class of list interface.
+List<Node> ans = new List<Node>();

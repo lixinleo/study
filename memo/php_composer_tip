@@ -1,0 +1,5 @@
+1. how to install a package using composer.php
+
+./composer.phar require slim/slim
+
+after the package is installed. It will update composer.json and composer.lock

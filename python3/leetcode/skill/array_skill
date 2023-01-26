@@ -1,0 +1,18 @@
+array or list
+
+map function
+
+Python example
+
+def myfunc(a):
+  return len(a)
+
+x = map(myfunc, ('apple', 'banana', 'cherry'))
+
+print(x)
+
+python
+copy list
+
+a=[1,2]
+c = list(a)

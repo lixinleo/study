@@ -1,0 +1,110 @@
+Character and String related:
+
+1. create an alphabetic char array
+
+char[] letters = "abcdefghijklmnopqrstuvwxyz".toCharArray();
+
+2. check is a char is alphabetic or digit
+
+char c = 'a';
+
+Character.isDigit(c);
+
+Character.isLetter(c);
+
+3. convert char to number
+
+int k = Character.getNumericValue(c);
+
+4. string to lower case and upper case
+
+String s="happy";
+String sl = s.toLowerCase();
+String ul = s.toUpperCase();
+
+5. substring
+String s = "abs".substring(0,2); //"ab". not includes last index
+
+6. string to int
+int foo = Integer.parseInt(myString);
+
+
+Math:
+
+1. min, max
+int ans = Math.min(low, high)
+int ans = Math.max(0, ans);
+
+2. ceil, floor
+double b = Math.floor(double a)
+double b = Math.ceil(double a)
+
+3. max value constant
+Integer.MAX_VALUE
+
+
+Heap:
+
+1. max heap
+
+ PriorityQueue<Integer> q = new PriorityQueue<>(Collections.reverseOrder());
+
+ add, poll, peek
+
+
+Stack:
+
+add or push, pop, peek
+
+
+Queue:
+
+Queue<Integer> q = new LinkedList<>();
+
+also can use poll()
+int r = q.remove();
+q.add(r);
+
+
+TreeSet:
+
+contains, higer()
+
+ TreeSet<Integer> treeSet = new TreeSet<>();
+        treeSet.add(1);
+        treeSet.add(2);
+        treeSet.add(3);
+
+        if (treeSet.contains(1)) {
+            System.out.println("have 1");
+        }
+
+
+        if (treeSet.higher(2) != null) {
+            System.out.println(treeSet.higher(2));
+        } else {
+            System.out.println("not find");
+        }
+
+
+Node:
+
+class Node {
+    int data;
+    Node left;
+    Node right;
+    Node() {
+      this.data = 0;
+      this.left = null;
+      this.right = null;
+    }
+    Node(int data) {
+      this.data = data;
+      this.left = null;
+      this.right = null;
+    }
+  }
+
+letter to int
+'a' == 97
+'z' == 122

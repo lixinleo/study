@@ -1,0 +1,3 @@
+use nodemon index.js instead of node index.js
+
+when code is changed, changes will be applied right away. Therefore, do not need to restart server

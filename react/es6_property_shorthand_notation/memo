@@ -1,0 +1,15 @@
+let dog = "weiwei"
+let cat = "fremk"
+
+let pets = {cat, dog}
+
+This equals to:
+let pets={
+cat:cat
+dog:dog
+}
+
+
+combineReducers({ counter, todos }). 
+
+This is equivalent to writing combineReducers({ counter: counter, todos: todos }).

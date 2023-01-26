@@ -1,0 +1,19 @@
+AWS lambda offers  maintenance-free and highly available computing environment. You create function, upload codes and configure the execute environment. Then. AWS
+will take care of it.
+
+Languages supported:  Java, Go, PowerShell, Node.js, C#, Python, and Ruby
+
+
+How to invoke lambda function:
+
+1. create a scheduled event rule. Let it run like a cron job
+
+2. consume by AWS api gateway (AWS API gateway to Lambda)
+User call the aws api gateway as a rest api call (can do no rest favor). api gateway send request to lambda function.
+Post body will be events parameter of a Lambda function.
+
+This is link for a good tutorial about this option 2.
+https://www.youtube.com/watch?v=uFsaiEhr1zs
+
+
+

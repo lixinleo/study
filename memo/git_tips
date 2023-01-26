@@ -1,0 +1,137 @@
+1. See log
+
+git log
+
+git log --name-status (see files modified)
+
+git log -p -2 (see detailed change for the last recent commits)
+
+2.  Rollback to the previous version and undo rollback
+
+a. rollback
+git reset commit-hash
+
+git checkout file_want
+
+b. undo rollback
+git reset HEAD@{1}
+
+c. revert to the previous version and DISCARD all changes
+git log to find commit object
+
+git reset --hard commit_object_hase
+
+3. Put a new project into git
+
+mkdir my_project
+cd my_project
+git init
+git add .
+git commit
+
+4. show local and server links
+
+ git remote show origin
+
+5. Git  Stash
+
+1. create stash              git stash save "some meaningful memo"
+2. list stash                   git stash list 
+3. show file detailed    git stash show stash@{2}
+3. apply stash             git stash apply stash@{10}
+4. clean stash             git stash clear
+
+
+6. do work on my_branch and make lots commits
+
+use git log to find commits to squash
+
+git rebase -i HEAD~3
+
+(3 is the number of new commits)
+
+pick f54574604 some msg 1
+pick btre54676 whh adfdsgf
+pick ery77899 fsdgfdhgfh
+
+change pick to squash
+
+pick f54574604 some msg 1
+squash btre54676 whh adfdsgf
+squash ery77899 fsdgfdhgfh
+
+Then do git commit
+
+
+7. Check out remote branch
+
+a. update branchs
+git fetch
+b. find branch
+git branch -r
+c. create a local branch based on remote branch 
+ git branch  local_branch_name origin/remote_branch_name
+
+8. Apply Git Patch
+
+a. create patch
+
+git diff > your_patch_file
+
+b. apply patch
+
+patch -p1 < your_patch_file
+
+
+9. Diff between branch
+
+git diff branch_1..branch_2
+
+
+10. Show hash of a file
+
+git ls-files -s myfile
+
+11. Show details of a commit
+
+git show rev-hash
+
+
+12. Git config
+
+a. set auto rebase
+git config --global branch.autosetuprebase always
+
+b. see config
+git config --list
+
+13. Solve conflict
+
+Use one party file
+
+git checkout --ours file_name
+git checkout --theirs file_name
+
+14. Remove remote stale branch
+
+git remote prune origin
+
+15. List branches by comitted time 
+
+git for-each-ref --sort=-committerdate refs/heads/
+ 
+16. Git tag
+1. list tag: git tag
+2. revert to the tag: git reset --hard tag_name 
+3. show tag time: git log --tags --simplify-by-decoration --pretty="format:%ai %d"
+
+17. cherry pick
+how to cherry pick codes from development to staging
+a. need to find commit hash using git log
+b. git checkout release/1-staging
+c. git checkout -b feature/has_picked
+d. git cherry-pick hash
+e. git push --set-upstream origin feature/has_picked
+f. create code review
+
+

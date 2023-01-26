@@ -1,0 +1,36 @@
+class Solution:
+    def nthMagicalNumber(self, n: int, a: int, b: int) -> int:
+        def numberOfMigical(n:int, a:int, b:int)->int:
+            #get lcm of a, b
+            lcm = (a*b)//math.gcd(a, b)
+      
+            return n//a + n//b - n//lcm
+    
+        #largest
+        high = min(a,b)*n
+        low =1
+        
+        while low <= high:
+            mid = (low + high)//2
+            
+            nOfMigic = numberOfMigical(mid, a, b)
+            
+            if nOfMigic == n:
+                if mid % a==0 or mid%b==0:
+                    return mid%(10**9+7)
+                else:
+                    high = mid-1
+            
+            elif nOfMigic > n:
+                high = mid-1
+            else:
+                low = mid+1
+        return -1
+
+Here are how to:
+
+1. set low and high boundary
+2. cal mid
+3. check up in mid
+4. if mid is good enough, return mid. Not always, if we use not calcul condition, may need to ignore equal
+5. move mid. need to minus 1 for high and plus 1 for low.

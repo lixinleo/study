@@ -1,0 +1,38 @@
+Regular Expression
+Special Symbol
+ \d is digit
+\s is white space
+. any char
+\w equal [A-Za-z0-9_]
+
+
+boundary
+^ is start of string
+$ is end of string
+\b word boundary
+
+how many times (for previous item)
+?  0 or 1
+* 0 or more
++ 1 or more
+{n} n times
+{n,} at least n times
+{n,m} n<=match times<=m
+
+group
+(pattern) group as one item
+(x|y) x or y
+[abc] either a,b or c
+[^abc] any char except a,b,c
+[a-d] match a,b.c or d
+
+PHP related function
+preg_match("/mypatter/i", $subject) return 1 if match; otherwise, return 0.  i is a flag for case insensitive search.
+
+Example
+
+all combinations of digits chars and spaces  /^([a-zA-Z\d\s]+)+$/  For this regular expression, empty string will fail
+
+
+replace all no alph char with ""
+preg_replace("/[^a-z]/i", "", $paragraph)

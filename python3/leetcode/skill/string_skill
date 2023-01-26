@@ -1,0 +1,26 @@
+Python:
+
+1. Find index
+
+ find() and rfind()
+
+txt = "Mi casa, su casa."
+x = txt.find("a")
+
+2. slice a string
+
+Get the characters from position 2 to position 5 (not included):
+b = "hello world"
+print(b[2:5])
+
+3. strip space in the end and in the begin
+txt = "  bab  ";
+txt = txt.strip()
+
+4. check if char(string) is digit
+txt = "123"
+txt.isnumeric()
+
+Check if string is alphnumbedr
+php
+if (ctype_alnum($paragraph[$i])

@@ -1,0 +1,6 @@
+int maxV =0;
+
+intend to use 0 as a indicate that this maxV is not touched. However, 0 is a valid value in this logic.
+Therefore, should be
+
+int maxV = -1;

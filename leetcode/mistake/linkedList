@@ -1,0 +1,7 @@
+while(cur.next) {
+}
+
+should be
+
+while(cur.next != null) {
+}

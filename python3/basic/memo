@@ -1,0 +1,55 @@
+1. add item into the end of list
+
+myList = []
+myList.append("leo")
+
+2. string compare
+
+return strX == reverseStr
+
+3. loop through string
+
+a. for element in str:
+b. use range function
+for id in range(len(mystr)):
+
+4. remove a element from list
+myList = [1,2,3]
+
+#remove from begin
+myList.pop(0)
+
+#remove from end
+myList.pop()
+
+#remove for index
+myList.pop(index)
+
+5. sort list
+myList.sort()
+
+6. associate array
+allowMoths = {"Jan" : "01", "Feb" : "02", "Mar":"03", "Apr":"04", "May":"05", "Jun":"06", "Jul":"07", "Aug":"08", "Sep":"09", "Oct":"10", "Nov":"11", "Dec":"12"}
+
+#use : to seperate key value
+#to access value
+allowMoths["Jan"]
+
+# see if key exists
+check = {}
+if x in check:
+
+7. string replace with return the end result. It does not change original result
+date = datePart.replace("th", "")
+
+8. substring
+datePart = "20th"
+date = datePart[0:len(datePart) -2]
+
+9. insert into list
+result = []
+result.insert(index, nums)
+
+10. string split to list
+txt = "welcome to jungle"
+x = txt.split()  [welcome, to, jungle]

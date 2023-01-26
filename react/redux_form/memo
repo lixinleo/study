@@ -1,0 +1,18 @@
+1. redux_form is enhancement form using hoc (high order component)
+
+2. input values to show up in submit, need
+dispatch(change(
+
+3.onSubmit={(values) => handleSaveSomeForm(values, )
+
+Here values are value of all form elements
+
+use prop match dispatch to dispatch handleSaveSomeForm
+
+4. onSubmit = {handleSubmit}
+handleSubmit is a redux form predefined prop
+
+
+useful video:
+
+https://www.youtube.com/watch?v=l_Yp8_SuGgU

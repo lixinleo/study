@@ -1,0 +1,12 @@
+1. grant a user to a database
+
+mysql>grant all on db_name.* to 'db_username'@'localhost' identified by 'db_userpasswd'
+
+2. dump a database to a sql file
+mysqldump -u root -p --opt leo_db>dump.sql
+
+3. see where mysql data file store
+
+a. log into mysql
+b. SHOW VARIABLES LIKE 'datadir';
+

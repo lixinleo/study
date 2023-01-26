@@ -1,0 +1,11 @@
+1.
+boolean done = true;
+
+while (true) {
+
+//doe something
+done = false;
+
+//however, if done is set false one time, it will be in a infinite loop! initiate done inside while loop!!
+
+}

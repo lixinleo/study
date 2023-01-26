@@ -1,0 +1,6 @@
+Init a Project
+
+mkdir rest_api
+cd rest_api
+npm init --yes
+npm i express

@@ -1,0 +1,13 @@
+1. without express
+
+ node app.js
+
+2. use express
+npm install
+
+node app2.js
+
+
+http://localhost:3000
+
+

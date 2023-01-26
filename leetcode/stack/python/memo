@@ -1,0 +1,9 @@
+Python does not have data structure for stack. However, we can use list as stack
+
+pop => list pop
+
+push => list append
+
+peek => list[-1]
+
+isEmpty => use len(list) to check

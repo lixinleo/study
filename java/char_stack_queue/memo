@@ -1,0 +1,22 @@
+char stack and queque
+
+char in java is one of primitive types. It is a 16-bit unsigned quatity.
+
+Inside JVM, it is just a 16-bit binary number, so all arithmetic operators are available to char.
+
+char d ='d';
+System.out.println(d+13); //ASCII Code for d is 100. Therefore will display 113.
+
+literal: a single character inside a single quote. (double quote is for String!)
+
+get char from String:  char c = s.charAt(i);
+
+convert char to String:
+char c = 'd';
+String c=String.valueOf(c);
+
+When create queue or stack, use character
+
+Queue<Character> q = new LinkedList();
+
+Stack<Character> stack = new Stack<>();

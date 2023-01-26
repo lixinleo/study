@@ -1,0 +1,30 @@
+Given an array arr[], find the lexicographically smallest array that can be obtained after performing at maximum of k consecutive swaps. 
+Examples : 
+ 
+
+Input: arr[] = {7, 6, 9, 2, 1}
+        k = 3
+Output: arr[] = {2, 7, 6, 9, 1}
+
+
+Input: arr[] = {7, 6, 9, 2, 1}
+        k = 1
+Output: arr[] = {6, 7, 9, 2, 1}
+
+n = 3
+k = 2
+arr = [5, 3, 1]
+output = [1, 5, 3]
+
+n = 5
+k = 3
+arr = [8, 9, 11, 2, 1]
+output = [2, 8, 9, 11, 1]
+
+
+solution:
+
+https://www.geeksforgeeks.org/lexicographically-smallest-array-k-consecutive-swaps/
+
+// Solution2.java is good one. Time complexity is O(n*n)
+

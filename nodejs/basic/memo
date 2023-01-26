@@ -1,0 +1,21 @@
+1. syntax sugur
+
+a.   return (isMember ? '$2.00' : '$10.00');
+
+
+
+
+
+
+
+
+
+
+
+
+
+string operation
+
+a. len and sub
+
+parseInt(needCredit.substring(1, needCredit.length ));

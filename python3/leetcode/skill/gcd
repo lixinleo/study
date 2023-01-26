@@ -1,0 +1,4 @@
+#python
+import math
+x = math.gcd(3,6)
+print(x) #3

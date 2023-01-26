@@ -1,0 +1,14 @@
+install (only for dev dependency. Also new version seems not work for me)
+
+npm install --save-dev jest@24.9.0
+
+However, in here only need to run: npm install
+
+To run test: (be noted in package.json script part: "test": "jest")
+npm run test
+
+
+see coverage:
+
+google-chrome coverage/lcov-report/index.html 
+

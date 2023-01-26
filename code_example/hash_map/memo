@@ -1,0 +1,19 @@
+https://leetcode.com/problems/maximum-ice-cream-bars/submissions/
+
+https://leetcode.com/problems/two-sum/submissions/
+
+java: 
+
+HashMap<Integer, Integer> hmap = new HashMap<Integer, Integer>();
+
+Python:
+
+mydic = {}
+
+
+Php: use array
+
+
+Javascript:
+
+var map = new Map();

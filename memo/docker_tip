@@ -1,0 +1,6 @@
+1. access api in one container from another container in the same machine
+
+a. find docker container ip
+docker inspect container_name
+
+b. use that ip to replace localhost:port_number

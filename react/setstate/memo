@@ -1,0 +1,11 @@
+There are two formats to set state
+1:
+this.setState({comment: 'Hello'});
+
+2:
+//that parameter state is previous state
+this.setState(function(state, props) {
+  return {
+    counter: state.counter + props.increment
+  };
+});

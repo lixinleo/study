@@ -1,0 +1,18 @@
+//create a letter array
+char[] alphabet = "abcdefghijklmnopqrstuvwxyz".toCharArray();
+
+//convert char digit to int; '12' => 12
+char c = '12';
+Character.getNumericValue(c);
+
+'12' - '0' //will return 12 too.
+
+//when concat char to build a long string, use string builder. Once runtime reduced from 500 ms to 14 ms!!
+one way: bad bad if we need to do lots of this "+"
+String ans = "";
+ans = ans + 9;
+
+other way: much better way if do lots of append
+StringBuilder ans = new StringBuilder("");
+ans.append(9);
+ans.toString();

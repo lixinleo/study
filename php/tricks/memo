@@ -1,0 +1,8 @@
+//find all keys with val in the array
+$keys = array_keys($nums, $val);
+
+//find the first match
+$key = array_search ( mixed $needle , array $haystack);
+
+//replace not a or number
+$s = preg_replace("/[^a-zA-Z\d]/", "", $s);

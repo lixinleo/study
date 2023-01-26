@@ -1,0 +1,15 @@
+1. Open files
+
+tar zxvf filename.tar.gz
+unzip filename.zip
+tar -xvf my.tar
+bunzip2 studybuzz.bz2
+bzip2 -d studybuzz.bz2
+tar jxvf studybuzz.tar.bz2
+unrar e test.rar
+
+
+2. Create files
+zip -r filename.zip filedir
+tar -cvf my.tar filedir
+

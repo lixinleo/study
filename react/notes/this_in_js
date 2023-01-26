@@ -1,0 +1,18 @@
+this in javascript
+
+It has different values depending on where it is used:
+
+In a method, this refers to the owner object.
+Alone, this refers to the global object.
+In a function, this refers to the global object.
+In a function, in strict mode, this is undefined.
+In an event, this refers to the element that received the event.
+
+
+However, 
+
+With arrow functions the this keyword always represents the object that defined the arrow function!
+
+Therefore, in event handler, we can access class property if we use arrow function. Otherwise, this
+refer to element which fire the event and we can not access property of class.
+

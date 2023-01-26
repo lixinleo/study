@@ -1,0 +1,5 @@
+//java to generate array
+char[] letters = "abcdefghijklmnopqrstuvwxyz".toCharArray();
+
+//python
+ letters = string.ascii_lowercase

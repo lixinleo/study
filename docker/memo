@@ -1,0 +1,68 @@
+commands
+0. good tutorial:
+https://www.youtube.com/watch?v=fqMOX6JJhGo
+
+1. docker run nginx
+
+start a container
+
+docker run ubuntu sleep 5
+
+docker run -d nginx
+
+This is in the detach mode
+
+docker run redis:4.0
+
+we are using tag
+
+if not sepecify, default tage is latest
+
+2. docker ps
+list containers
+
+a. docker ps -a
+
+show all containers
+
+
+3. docker stop containerId/name
+
+stop container
+
+4. docker rm containername
+remove a container permently
+
+5. docker images
+
+see a list of images
+
+
+6. docker rmi nginx
+remove image for nginx
+
+7. docker pull nginx
+
+download image only. not run at this time
+
+8. docker exec cc-web cat /etc/hosts
+
+run docker command
+
+docker exec -it docker_redis_1 redis-cli FLUSHALL
+flush redis cache
+
+9. docker attach 1233
+
+1234 is container id. attach a container.
+
+do not need full id string. Just first several chars
+
+10. find image tag
+go to docker hub to find supported tags for a image
+
+11. copy a file from host to docker container:
+docker cp GeoLite2-Country.mmdb cc-web:/usr/share/GeoIP/
+
+12. find docker internal ip etc
+docker inspect cc-web

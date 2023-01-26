@@ -1,0 +1,48 @@
+1. good redux tutorial 
+
+https://www.youtube.com/watch?v=poQXNp9ItL4
+
+2. update from immutability-helper
+
+In redux, we need to immutable update a state. Keep the old state unchangable, and create a new state with updated info.
+Some time it is difficult. immutability-helper is a utility libray to make immytable update easy.
+
+immutability-helper is a drop-in replacement for react-addons-update. It implemented a function named update
+url: https://github.com/kolodny/immutability-helper/blob/master/README.md
+
+Here is a example to use this library:
+
+import update from 'immutability-helper';
+
+const state = ['x'];
+const newState = update(state, {$push: ['y']});
+console.log(newState) // ['x', 'y']
+console.log(state) // ['x']
+
+
+The above we use update's $push command to add a new element to a copied state. The original state is unchanged.
+
+Available Commands
+{$push: array} push() all the items in array on the target.
+{$unshift: array} unshift() all the items in array on the target.
+{$splice: array of arrays} for each item in arrays call splice() on the target with the parameters provided by the item. Note: The items in the array are applied sequentially, so the order matters. The indices of the target may change during the operation.
+{$set: any} replace the target entirely.
+{$toggle: array of strings} toggles a list of boolean fields from the target object.
+{$unset: array of strings} remove the list of keys in array from the target object.
+{$merge: object} merge the keys of object with the target.
+{$apply: function} passes in the current value to the function and updates it with the new returned value.
+{$add: array of objects} add a value to a Map or Set. When adding to a Set you pass in an array of objects to add, when adding to a Map, you pass in [key, value] arrays like so: update(myMap, {$add: [['foo', 'bar'], ['baz', 'boo']]})
+{$remove: array of strings} remove the list of keys in array from a Map or Set.
+
+3. mapDispatchToProps
+
+here are two videos to explain this concept:
+
+https://www.youtube.com/watch?v=40pWMVMnftc
+
+https://www.youtube.com/watch?v=h1yLGadA6e8
+
+4. mpaStatesToProps
+
+here is a good video
+https://www.youtube.com/watch?v=CZ2qGtAnhoE

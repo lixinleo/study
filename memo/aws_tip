@@ -1,0 +1,6 @@
+1. how to connect to EC2 instance
+
+ssh -i noc.pem ec2-user@10.48.6.226
+
+here noc.pem is a key pair file, and the user in EC2 is always ec2-user
+

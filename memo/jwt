@@ -1,0 +1,96 @@
+1. what is jwt
+
+Link to RFC 7519
+https://tools.ietf.org/html/rfc7519#section-4.1
+
+Youtube tutorial
+
+https://www.youtube.com/watch?v=7Q17ubqLfaM
+
+JSON Web Token (JWT) is an open standard (RFC 7519) that defines a compact and self-contained way for securely transmitting information between parties as a JSON object. This information can be verified and trusted because it is digitally signed.
+
+2. what it is used for
+
+a. Authorization
+
+This is the most common scenario for using JWT. Once the user is logged in, each subsequent request will include the JWT, allowing the user to access routes, services, and resources that are permitted with that token. Single Sign On is a feature that widely uses JWT nowadays, because of its small overhead and its ability to be easily used across different domains.
+
+b. Information Exchange
+
+
+3. What is JWT structure
+It consists of three part seperated by dots(.)
+sample: xxxxx.yyyyy.zzzz
+
+header
+payload
+signature
+
+
+Header:
+
+The header typically consists of two parts: the type of the token, which is JWT, and the signing algorithm being used, such as HMAC SHA256 or RSA.
+
+example:
+
+{
+  "alg": "HS256",
+  "typ": "JWT"
+}
+
+Then, this JSON is Base64Url encoded to form the first part of the JWT.
+
+Payload:
+
+The second part of the token is the payload, which contains the claims. 
+
+a. Registered claims such as iss(issuer), exp(expiration time), sub(subject), aud (audience) and more (see rfc 7519)
+
+b. Public claims
+Claim Names can be defined at will by those using JWTs. But should be registered in the IANA "JSON Web Token Claims" registry to avoid collision.
+
+c. Private claims:
+These are the custom claims created to share information between parties that agree on using them and are neither registered or public claims.
+
+Here is an example:
+
+{
+"iss":"jackfruit",
+"identity":
+{"id":15,"customerId":null,"accountId":1073534,"username":"leoaff1","isMerchant":false,"isStaff":false,"isAffiliate":true,"isCustomer":false,"email":"lshnadd@w.com","clientId":"64110c49-f6e2-46d0-92f6-28f28f794ec7","permissions":{"default.terms.my-terms":true,"services:terms.acceptances.list-acceptances":true,"services:terms.terms.download":true,"services:terms.acceptances.accept-term":true}},
+"jti":"JWT601d65cf769082.39090196",
+"iat":1612539343,
+"exp":1612542943
+}
+
+Signature
+To create the signature part you have to take the encoded header, the encoded payload, a secret, the algorithm specified in the header, and sign that.
+
+For example if you want to use the HMAC SHA256 algorithm, the signature will be created in the following way:
+
+HMACSHA256(
+  base64UrlEncode(header) + "." +
+  base64UrlEncode(payload),
+  secret)
+
+php codes:
+
+//headers and claims are array, so need to json_encode them first
+$header = Base64Url::encode(json_encode($headers));
+$payload = Base64Url::encode(json_encode($claims));
+$token = $header . '.' . $payload;
+
+$secret = Base64Url::encode(hash_hmac("sha256", $token, "some secret", true));
+
+//build token
+$token . '.' . $signature;
+
+4. how to consume it:
+
+a. verify it using signature
+
+use the first part to generate a signature to compare with signature sent
+
+b. if signature match, base64 decode payload and use them
+
+

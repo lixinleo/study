@@ -1,0 +1,7 @@
+How to generate ssh key pair (check ~/.ssh directory. If exists, skip step 1)
+
+1. generate $ ssh-keygen -o -t rsa -C "your@email.com"
+
+2. see public key $ cat ~/.ssh/id_rsa.pub
+
+note: you can generate as many as needed key pair. Use different email address. Also save into different files.
